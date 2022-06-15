@@ -1,0 +1,21 @@
+35.176.231.109:8080/job/Java_Build/build?token=rhd 
+
+rhd:111c6429d61122577cda67a8ac3c249572
+
+wget -q --auth-no-challenge --user rhd --password rhd123 --output-document - 'http://35.176.231.109:8080/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,":",//crumb)' 
+
+Jenkins-Crumb:ec4dd57056ca15872d888a256c2e782abb370cc8f1dda6b043e00e5b311673ba%  
+Jenkins-Crumb:7668692a1106147beeab779c841a83805ae6af0f7effa91104e606f98a6ebc55
+
+curl -I -X POST "http://rhd:111c6429d61122577cda67a8ac3c249572@35.176.231.109:8080/job/Java_Build/build?token=rhd" -H "Jenkins-Crumb:7668692a1106147beeab779c841a83805ae6af0f7effa91104e606f98a6ebc55"
+
+
+
+JAVA_HOME=/usr/lib/jvm/java-18-openjdk-amd64
+export JAVA_HOME
+PATH=${JAVA_HOME}/bin:${PATH}
+export PATH
+JRE_HOME=/usr/lib/jvm/jre
+export JRE_HOME
+JAVA_OPTS="-XX:+AggressiveOpts -Xms256m -Xmx512m -XX:MaxPermSize=256m -XX:+DisableExplicitGC"
+export JAVA_OPTS

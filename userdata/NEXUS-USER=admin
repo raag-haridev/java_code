@@ -1,0 +1,9 @@
+NEXUS-USER=admin
+NEXUS-PASS=rhd123
+SNAP-REPO=java-snapshot-mvn
+RELEASE-REPO=java-release-mvn
+CENTRAL-REPO=java-mvn-dependencies
+NEXUS-GRP-REPO=java-nexus-group
+NEXUSIP=18.168.199.83
+NEXUSPORT=8081
+
